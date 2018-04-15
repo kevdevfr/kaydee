@@ -1,0 +1,436 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+html { overflow-x: hidden; }
+body { line-height: 1; }
+
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+*, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('./fnt/gotham-book-webfont.eot');
+    src: url('./fnt/gotham-book-webfont.svg#gotham') format('svg'),
+		 url('./fnt/gotham-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fnt/gotham-book-webfont.woff') format('woff'),
+         url('./fnt/gotham-book-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('./fnt/gotham-light-webfont.eot');
+    src: url('./fnt/gotham-light-webfont.svg#gotham') format('svg'),
+		 url('./fnt/gotham-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fnt/gotham-light-webfont.woff') format('woff'),
+         url('./fnt/gotham-light-webfont.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('./fnt/gotham-thin-webfont.eot');
+    src: url('./fnt/gotham-thin-webfont.svg#gotham') format('svg'),
+		 url('./fnt/gotham-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fnt/gotham-thin-webfont.woff') format('woff'),
+         url('./fnt/gotham-thin-webfont.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('./fnt/gotham-medium-webfont.eot');
+    src: url('./fnt/gotham-medium-webfont.svg#gotham') format('svg'),
+		 url('./fnt/gotham-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fnt/gotham-medium-webfont.woff') format('woff'),
+         url('./fnt/gotham-medium-webfont.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('./fnt/gotham-bold-webfont.eot');
+    src: url('./fnt/gotham-bold-webfont.svg#gotham') format('svg'),
+		 url('./fnt/gotham-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fnt/gotham-bold-webfont.woff') format('woff'),
+         url('./fnt/gotham-bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('./fnt/gotham-ultra-webfont.eot');
+    src: url('./fnt/gotham-ultra-webfont.svg#gotham') format('svg'),
+		 url('./fnt/gotham-ultra-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fnt/gotham-ultra-webfont.woff') format('woff'),
+         url('./fnt/gotham-ultra-webfont.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Exmouth';
+    src: url('./fnt/exmouth_-webfont.eot');
+    src: url('./fnt/exmouth_-webfont.svg#Exmouth') format('svg'),
+		 url('./fnt/exmouth_-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fnt/exmouth_-webfont.woff') format('woff'),
+         url('./fnt/exmouth_-webfont.ttf') format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+
+}
+html,body  { height: 100% }
+
+html { overflow-y: scroll; }
+
+strong { font-weight: bold; }
+
+em { font-style: italic; }
+
+.mfp-container { padding: 0; }
+.mfp-bottom-bar{
+text-shadow: 0 0 0;}
+
+.popup-block {
+ max-width: 60em;
+ width: 100%;
+ margin: 0 auto;
+ background: #fff;
+ padding: 2em;
+}
+
+
+/*************************************
+	Slider
+*************************************/
+#slider { width: 100%; overflow: hidden; }
+
+#slides {
+	width: 500%;
+	-webkit-transition: all .5s ease;
+	transition: all .5s ease;
+}
+
+.slide {
+	display: inline-block;
+	vertical-align: top;
+	width: 20%;
+	min-height: 400px;
+	background-size: cover;
+	background-position: 50%;
+}
+
+form[name='controls'] { display: none; }
+#controls { text-align: center; padding: 10px 0; }
+
+#controls label {
+	display: inline-block;
+	vertical-align: middle;
+	width: 10px;
+	height: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	background: #ccc;
+	cursor: pointer;
+}
+
+#controls label.active { background: #888; }
+#controls label.active.play { 	background: transparent; width: 0; 	height: 0;
+border-top: 8px solid transparent;
+border-bottom: 8px solid transparent;
+border-left: 10px solid #888;	}
+
+border-right:10px solid blue;  }
+
+#controls, .slide {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+
+.cmn-toggle-switch {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 4rem;
+  height: 4rem;
+  font-size: 0;
+  text-indent: -9999px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background 0.3s;
+          transition: background 0.3s;
+}
+
+.cmn-toggle-switch:focus {
+  outline: none;
+}
+
+.cmn-toggle-switch span {
+  display: block;
+  position: absolute;
+  top: 1.875rem;
+  left: 1rem;
+  right: 1rem;
+  height: .25rem;
+  background: white;
+}
+
+.cmn-toggle-switch span::before,
+.cmn-toggle-switch span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: .25rem;
+  background-color: #fff;
+  content: "";
+}
+
+.cmn-toggle-switch span::before {
+  top: -.750rem;
+}
+
+.cmn-toggle-switch span::after {
+  bottom: -.725rem;
+}
+
+/**
+ * Style 1
+ *
+ * Rotating hamburger icon (rot), that simply rotates 90 degrees when activated.
+ * Nothing too fancy, simple transition.
+ */
+.cmn-toggle-switch__rot {
+  background-color: #28aadc;
+}
+
+.cmn-toggle-switch__rot span {
+  -webkit-transition: -webkit-transform 0.3s;
+          transition: transform 0.3s;
+}
+
+/* active state, i.e. menu open */
+.cmn-toggle-switch__rot.active {
+  background-color: #166888;
+}
+
+.cmn-toggle-switch__rot.active span {
+  -webkit-transform: rotate(450deg);
+      -ms-transform: rotate(450deg);
+          transform: rotate(450deg);
+}
+
+/**
+ * Style 2
+ *
+ * Hamburger to "x" (htx). Takes on a hamburger shape, bars slide
+ * down to center and transform into an "x".
+ */
+.cmn-toggle-switch__htx {
+  background-color: #f5f5f5;
+}
+
+.cmn-toggle-switch__htx span {
+  -webkit-transition: background 0s 0.3s;
+          transition: background 0s 0.3s;
+  background-color: #212121;
+}
+
+.cmn-toggle-switch__htx span::before,
+.cmn-toggle-switch__htx span::after {
+  -webkit-transition-duration: 0.3s, 0.3s;
+          transition-duration: 0.3s, 0.3s;
+  -webkit-transition-delay: 0.3s, 0s;
+          transition-delay: 0.3s, 0s;
+  background-color: #212121;
+}
+
+.cmn-toggle-switch__htx span::before {
+  -webkit-transition-property: top, -webkit-transform;
+          transition-property: top, transform;
+}
+
+.cmn-toggle-switch__htx span::after {
+  -webkit-transition-property: bottom, -webkit-transform;
+          transition-property: bottom, transform;
+}
+
+/* active state, i.e. menu open */
+.cmn-toggle-switch__htx.active {
+  background-color: #f5f5f5;
+}
+
+.cmn-toggle-switch__htx.active span {
+  background: none;
+}
+
+.cmn-toggle-switch__htx.active span::before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.cmn-toggle-switch__htx.active span::after {
+  bottom: 0;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.cmn-toggle-switch__htx.active span::before,
+.cmn-toggle-switch__htx.active span::after {
+  -webkit-transition-delay: 0s, 0.3s;
+          transition-delay: 0s, 0.3s;
+}
+
+/**
+ * Style 3
+ *
+ * Hamburger to left-arrow (htla). Hamburger menu transforms to a left-pointing
+ * arrow. Usually indicates an off canvas menu sliding in from left that
+ * will be close on re-click of the icon.
+ */
+.cmn-toggle-switch__htla {
+  background-color: #f1f1f1;
+}
+
+.cmn-toggle-switch__htla span {
+  -webkit-transition: -webkit-transform 0.3s;
+          transition: transform 0.3s;
+}
+
+.cmn-toggle-switch__htla span::before {
+  -webkit-transform-origin: top right;
+      -ms-transform-origin: top right;
+          transform-origin: top right;
+  -webkit-transition: -webkit-transform 0.3s, width 0.3s, top 0.3s;
+          transition: transform 0.3s, width 0.3s, top 0.3s;
+}
+
+.cmn-toggle-switch__htla span::after {
+  -webkit-transform-origin: bottom right;
+      -ms-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.3s, width 0.3s, bottom 0.3s;
+          transition: transform 0.3s, width 0.3s, bottom 0.3s;
+}
+
+/* active state, i.e. menu open */
+.cmn-toggle-switch__htla.active {
+  background-color: #f1f1f1;
+}
+
+.cmn-toggle-switch__htla.active span {
+  -webkit-transform: rotate(540deg);
+      -ms-transform: rotate(540deg);
+          transform: rotate(540deg);
+}
+
+.cmn-toggle-switch__htla.active span::before,
+.cmn-toggle-switch__htla.active span::after {
+  width: 50%;
+}
+
+.cmn-toggle-switch__htla.active span::before {
+  top: 0;
+  -webkit-transform: translateX(1.25rem) translateY(0.10rem) rotate(45deg);
+      -ms-transform: translateX(1.25rem) translateY(0.10rem) rotate(45deg);
+          transform: translateX(1.25rem) translateY(0.10rem) rotate(45deg);
+}
+
+.cmn-toggle-switch__htla.active span::after {
+  bottom: 0;
+  -webkit-transform: translateX(1.5rem) translateY(-0.10rem) rotate(-45deg);
+      -ms-transform: translateX(1.5rem) translateY(-0.10rem) rotate(-45deg);
+          transform: translateX(1.25rem) translateY(-0.10rem) rotate(-45deg);
+}
+
+/**
+ * Style 4
+ *
+ * Hamburger to right-arrow (htra). Hamburger menu transforms to a
+ * right-pointing arrow. Usually indicates an off canvas menu sliding in from
+ * right that will be close on re-click of the icon.
+ */
+.cmn-toggle-switch__htra {
+  background-color: #f1f1f1;
+}
+
+.cmn-toggle-switch__htra span {
+  -webkit-transition: -webkit-transform 0.3s;
+          transition: transform 0.3s;
+}
+
+.cmn-toggle-switch__htra span::before {
+  -webkit-transform-origin: top left;
+      -ms-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transition: -webkit-transform 0.3s, width 0.3s, top 0.3s;
+          transition: transform 0.3s, width 0.3s, top 0.3s;
+}
+
+.cmn-toggle-switch__htra span::after {
+  -webkit-transform-origin: bottom left;
+      -ms-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transition: -webkit-transform 0.3s, width 0.3s, bottom 0.3s;
+          transition: transform 0.3s, width 0.3s, bottom 0.3s;
+}
+
+/* active state, i.e. menu open */
+.cmn-toggle-switch__htra.active {
+  background-color: #f1f1f1;
+}
+
+.cmn-toggle-switch__htra.active span {
+  -webkit-transform: rotate(540deg);
+      -ms-transform: rotate(540deg);
+          transform: rotate(540deg);
+}
+
+.cmn-toggle-switch__htra.active span::before,
+.cmn-toggle-switch__htra.active span::after {
+  width: 50%;
+}
+
+.cmn-toggle-switch__htra.active span::before {
+  top: 0;
+  -webkit-transform: translateX(-0.20rem) translateY(0.10rem) rotate(-45deg);
+      -ms-transform: translateX(-0.20rem) translateY(0.10rem) rotate(-45deg);
+          transform: translateX(-0.20rem) translateY(0.10rem) rotate(-45deg);
+}
+
+.cmn-toggle-switch__htra.active span::after {
+  bottom: 0;
+  -webkit-transform: translateX(-0.20rem) translateY(-0.10rem) rotate(45deg);
+      -ms-transform: translateX(-0.20rem) translateY(-0.10rem) rotate(45deg);
+          transform: translateX(-0.20rem) translateY(-0.10rem) rotate(45deg);
+}
+input[name="tap"] {
+  display: none;
+}

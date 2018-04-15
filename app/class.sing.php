@@ -1,0 +1,1 @@
+<?php require_once dirname(__FILE__)."/class.single.php";class Sing extends Single {}?>

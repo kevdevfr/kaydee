@@ -1,0 +1,1 @@
+<?php require_once "class.single.php";class Contact extends Single {	protected function getXmlTag() { return 'contact'; }	protected function getElements() {		return Array(			Array('text','Sujet'),			Array('text','Envoyé par'),			Array('text','Reçu par'),			Array('text','Tél'),			Array('text','Fax'),			Array('textarea','Adresses')		);	}}?>

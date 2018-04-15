@@ -1,0 +1,169 @@
+@font-face {
+    font-family: 'Gotham';
+    src: url('./fnt/gotham-book-webfont.eot');
+    src: url('./fnt/gotham-book-webfont.svg#gotham') format('svg'),
+		 url('./fnt/gotham-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fnt/gotham-book-webfont.woff') format('woff'),
+         url('./fnt/gotham-book-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('./fnt/gotham-light-webfont.eot');
+    src: url('./fnt/gotham-light-webfont.svg#gotham') format('svg'),
+		 url('./fnt/gotham-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fnt/gotham-light-webfont.woff') format('woff'),
+         url('./fnt/gotham-light-webfont.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('./fnt/gotham-thin-webfont.eot');
+    src: url('./fnt/gotham-thin-webfont.svg#gotham') format('svg'),
+		 url('./fnt/gotham-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fnt/gotham-thin-webfont.woff') format('woff'),
+         url('./fnt/gotham-thin-webfont.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('./fnt/gotham-medium-webfont.eot');
+    src: url('./fnt/gotham-medium-webfont.svg#gotham') format('svg'),
+		 url('./fnt/gotham-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fnt/gotham-medium-webfont.woff') format('woff'),
+         url('./fnt/gotham-medium-webfont.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('./fnt/gotham-bold-webfont.eot');
+    src: url('./fnt/gotham-bold-webfont.svg#gotham') format('svg'),
+		 url('./fnt/gotham-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fnt/gotham-bold-webfont.woff') format('woff'),
+         url('./fnt/gotham-bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('./fnt/gotham-ultra-webfont.eot');
+    src: url('./fnt/gotham-ultra-webfont.svg#gotham') format('svg'),
+		 url('./fnt/gotham-ultra-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fnt/gotham-ultra-webfont.woff') format('woff'),
+         url('./fnt/gotham-ultra-webfont.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+html,body  { height: 100% }
+
+html { overflow-y: scroll; }
+body {
+	font-family: 'Gotham';
+	font-size: 14px;
+	color: #2f2926;
+	
+}
+.wrap { height: 100%; }
+.wrap:before {
+content: '';
+display: inline-block;
+height: 100%;
+vertical-align: middle;
+}
+
+#comingsoon {
+	display: inline-block;
+	vertical-align: middle;
+	text-align:center;
+	width: 100%;
+	padding-bottom: 5em;
+}
+#comingsoon a {
+	color: #212121;
+	text-decoration: none;
+}
+#comingsoon a:hover {
+	text-decoration: underline;
+}
+#comingsoon h1 {
+}
+#comingsoon h1 a img {
+	padding-right: 0.1em;
+}
+#comingsoon h1 a {
+	line-height: 1em;
+	font-size: 4em;
+	text-transform: uppercase;
+	font-weight: 500;
+	letter-spacing: 0.5em;
+}
+#comingsoon h1 a:hover {
+	text-decoration: none;
+}
+#comingsoon h1 a small{
+	font-size: 0.25em;
+	letter-spacing: 0.6em;
+	color: #eee;
+}
+#comingsoon p {
+	font-size: 0.8em;
+	line-height: 1.6em;
+	margin-bottom: 1.6em;
+}
+
+#comingsoon p.baseline {
+	text-transform: uppercase;
+	letter-spacing: 1em;
+	margin: 0;
+	padding-left: 1em;
+	color: #777;
+line-height: 6.5em;
+}
+
+#comingsoon p small {
+	font-size: 0.8em;
+}
+#comingsoon span {
+	padding-left: .35em;
+}
+#comingsoon p small a {
+	color: #7e7e7e;
+}
+
+#comingsoon p small img{
+	height: 2.6em;
+	vertical-align: -1em;
+}
+#comingsoon p:last-child{
+	letter-spacing: 0.1em;
+}
+
+@media only screen and (max-width: 700px) {
+	body {
+		font-size: 14px;
+	}
+	#comingsoon h1 a img {
+		width: 100%;
+	}
+	#comingsoon h1 a  {
+font-size: 3em;
+	}
+	#comingsoon {
+		display: inline-block;
+		vertical-align: middle;
+		text-align:center;
+		width: 97%;
+	}
+}

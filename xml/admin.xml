@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<structure>
+  <single id="cfg" name="Configuration" lvl="2">
+    <text id="prefixe" name="Pr&#xE9;fixe"/>
+    <text id="nom" name="Nom"/>
+    <text id="mail" name="Mail"/>
+    <text id="adresse1" name="Adresse 1"/>
+    <text id="adresse2" name="Adresse 2"/>
+    <text id="tel" name="T&#xE9;l"/>
+    <text id="tel2" name="T&#xE9;l Display"/>
+    <text id="fax" name="Fax"/>
+    <gallery id="logo" name="Logo"/>
+    <gallery id="picto" name="Picto"/>
+    <text id="facebook" name="Facebook"/>
+    <text id="twitter" name="Twitter"/>
+    <text id="instagram" name="Instagram"/>
+    <text id="title" name="Title"/>
+    <textarea id="description" name="Description"/>
+    <textarea id="analytics" name="Analytics"/>
+    <radio id="maintenance" name="Maintenance">
+      <option id="oui">Oui</option>
+      <option id="Non">Non</option>
+    </radio>
+    <radio id="agelegal" name="&#xC2;ge L&#xE9;gal">
+      <option id="oui">Oui</option>
+      <option id="Non">Non</option>
+    </radio>
+  </single>
+  <single id="prmtrs" name="Param&#xE8;tres" lvl="1">
+    <theme id="theme" name="Th&#xE8;me"/>
+  </single>
+  <multi id="id" name="Id" lvl="1"/>
+  <single id="module" name="Module" lvl="2">
+    <text id="texte" name="texte"/>
+    <gallery id="gal" name="Galerie"/>
+  </single>
+</structure>

@@ -1,0 +1,256 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Open Sans', Sans-serif;
+  font-size: 14px;
+  line-height: 1.4em;
+  background: #f5f5f5;
+  color: #212121;
+}
+
+.wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4em;
+}
+
+footer, .push {
+  height: 4em;
+}
+
+p, blockquote {
+  margin-bottom: 1em;
+  max-width: 44em;
+  margin: 0 auto;
+}
+
+p.center { text-align: center; }
+p.right { text-align: right; }
+p.left { text-align: left; }
+
+blockquote {
+  font-size: 1.6em;
+  line-height: 1.4em;
+  max-width: 30em;
+  margin-top: 1em;
+}
+
+p img {
+  max-width: 100%;
+  margin: 1em 0;
+}
+
+h1 {
+  font-family: 'Montserrat', Sans-serif;
+  font-weight: 600;
+  font-size: 2em;
+  line-height: 1.2em;
+  padding-top: .6em;
+  letter-spacing: .06em;
+}
+
+h1:before {
+  content: '';
+  display: block;
+  width: 2em;
+  height: 2em;
+  float: right;
+}
+
+h1:after {
+  content: '';
+  display: block;
+  clear: right;
+}
+
+h3 {
+  font-size: 1.6em;
+  font-weight: bold;
+  max-width: 27.7em;
+  margin: 0 auto .6em auto;
+  line-height: 1.2em;
+}
+
+a {
+  text-decoration: none;
+  color: #aa0000;
+}
+
+header, footer, section {
+  max-width: 72em;
+  margin: 0 auto;
+  position: relative;
+  padding: 1em;
+}
+
+.item {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  z-index: 3;
+}
+
+input[name="tap"] + nav {
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s opacity ease-out;
+  -webkit-transition: 0.2s opacity ease-out;
+}
+
+input[name="tap"]:checked + nav {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background-color: #f5f5f5;
+  font-family: 'Montserrat', Sans-serif;
+}
+
+nav > div {
+  position: relative;
+  height: 100%;
+}
+
+nav > div > menu {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+nav > div > menu > li {
+  list-style-type: none;
+  text-align: center;
+  font-size: 1.6em;
+  line-height: 1.6em;
+}
+
+nav > div > menu ul {
+  font-size: .8em;
+}
+
+section {
+  margin: 1em auto;
+}
+
+.background-container {
+  margin: 0 auto;
+  max-width: 72em;
+}
+
+.background {
+  width: 100%;
+}
+
+form {
+  max-width: 44em;
+  margin: 0 auto;
+}
+
+form input[type="text"], form input[type="submit"], form button, form textarea {
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+  background: transparent;
+  padding: .3em .6em;
+  border: .25em solid #ccc;
+  margin: .6em auto;
+  width: 100%;
+}
+
+form input[type="text"].erreur, form textarea.erreur {
+  border: .25em solid #FF9D9D;
+}
+
+form input[type="submit"], form button {
+  border: .25em solid #212121;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover, form button:hover {
+  background: #212121;
+  color: #f5f5f5;
+}
+
+.succes { text-align: center; color: #3FBD67; }
+
+footer {
+  text-align: right;
+}
+
+@media only screen and (min-width : 700px) {
+
+  header, footer, section {
+    padding: 2em;
+  }
+
+  .item {
+    display: none;
+  }
+
+  input[name="tap"] + nav {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  nav {
+    position: absolute;
+    top: 2em;
+    right: 2em;
+    bottom: auto;
+    left: auto;
+    z-index: 2;
+    background-color: transparent;
+    font-family: 'Montserrat', Sans-serif;
+  }
+
+  nav > div {
+    position: relative;
+    height: auto;
+    margin: 0 auto;
+    text-align: right;
+  }
+
+  nav > div > menu {
+    top: auto;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  nav > div > menu > li {
+    display: inline-block;
+    list-style-type: none;
+    text-align: left;
+    font-size: 1em;
+    line-height: 2em;
+    width: 6.5em;
+  }
+
+  nav > div > menu > li ul {
+    position: absolute;
+  }
+
+  nav > div > menu > li:hover ul {
+    display: block;
+  }
+
+  nav > div > menu > li ul {
+    display: none;
+  }
+
+  h1 {
+    padding-top: 0;
+  }
+}

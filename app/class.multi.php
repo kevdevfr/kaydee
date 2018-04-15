@@ -1,0 +1,1 @@
+<?php require_once dirname(__FILE__)."/class.multiple.php";class Multi extends Multiple {}?>

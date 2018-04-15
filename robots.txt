@@ -1,0 +1,6 @@
+# www.robotstxt.org/
+Sitemap: http://champagne-gailliot.com/sitemap.xml
+
+# Allow crawling of all content
+User-agent: *
+Disallow:
